@@ -1,6 +1,6 @@
 # Monte Carlo Conformal Information-theoretic (MCCI) Feature Selection
 
-### Summary
+## Summary
 
 MCCI is a novel feature selection method combining Monte Carlo conformal prediction and mutual information.
 
@@ -11,9 +11,9 @@ The Monte Carlo conformal prediction implementation was heavily inspired by [Dee
 
 MCCI approaches the selective power of Boruta and RFECV, with a computation time close to a simple Lasso or Elastic Net. Exact comparison figures will soon be uploaded.
 
-### Usage
+## Usage
 
-#### Feature selection
+### Feature selection
 ```
 from mcci_selector import MCCISelector
 
@@ -23,7 +23,7 @@ n_features_to_select = 10
 X_selected = selector.fit_transform(X, y, n_features_to_select)
 ```
 
-#### Explainability
+### Explainability
 
 ##### Feature importance
 ```
