@@ -47,7 +47,7 @@ print("Calibrated Threshold:", threshold)
 
 ##### Feature stability
 ```
-stability_df = explainer.get_feature_stability(X_scaled, y, n_iterations=20, subsample_ratio=0.8)
+stability_df = explainer.get_feature_stability(X, y, n_iterations=20, subsample_ratio=0.8)
 print("Feature Stability:")
 print(stability_df)
 
@@ -59,7 +59,7 @@ explainer.plot_feature_stability(stability_df, top_n=15)
 ```
 # select an instance for local interpretation
 instance_index = 0
-X_instance = X_scaled[instance_index]
+X_instance = X[instance_index]
 
 local_importance = explainer.local_feature_importance(X_instance)
 print("Local Feature Importance:")
